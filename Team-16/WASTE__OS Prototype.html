@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<!-- saved from url=(0039)https://harric07-gt.github.io/waste-os/ -->
+<html lang="en"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>WASTE//OS Prototype</title>
+<link rel="stylesheet" href="./WASTE__OS Prototype_files/style.css">
+</head>
+<body>
+<div class="app">
+<aside>
+  <div class="brand">♻ WASTE<span>//OS</span></div>
+  <div class="mini">SMART CITY PROTOTYPE</div>
+  <button class="nav" data-page="home">⌂ <span>Command Center</span></button>
+  <button class="nav" data-page="scan">◉ <span>AI Waste Scanner</span></button>
+  <button class="nav" data-page="bins">▣ <span>Smart Bin Network</span></button>
+  <button class="nav" data-page="route">➤ <span>Collection Route</span></button>
+  <button class="nav active" data-page="rewards">★ <span>EcoPoints</span></button>
+  <div class="side-bottom"><small>SYSTEM STATUS</small><b><i></i> ALL SYSTEMS ONLINE</b><span>Prototype v1.0</span></div>
+</aside>
+
+<main>
+<header><div><small>WASTE INTELLIGENCE PLATFORM</small><h1 id="pageTitle">EcoPoints</h1></div><div class="clock" id="clock">10:25:26 pm</div></header>
+
+<section id="home" class="page">
+  <div class="hero">
+    <div><small>LIVE CITY NETWORK</small><h2>Waste management,<br><em>before the problem.</em></h2>
+    <p>WASTE//OS predicts overflow, guides citizens and optimizes collection using one intelligent network.</p>
+    <button class="cta" onclick="showPage(&#39;scan&#39;)">START AI SCAN →</button></div>
+    <div class="core"><div>AI<br><small>ONLINE</small></div><span></span></div>
+  </div>
+  <div class="cards">
+  <div class="metric">
+    <small>SMART BINS</small>
+    <strong class="counter" data-target="248">248</strong>
+    <span>↑ 12 today</span>
+  </div>
+
+  <div class="metric">
+    <small>WASTE RECOVERED</small>
+    <strong class="counter" data-target="8.7">8.7 T</strong>
+    <span>↑ 18.4%</span>
+  </div>
+
+  <div class="metric alert">
+    <small>OVERFLOW ALERTS</small>
+    <strong class="counter" data-target="7">7</strong>
+    <span>Priority action</span>
+  </div>
+
+  <div class="metric">
+    <small>ECOPOINTS</small>
+    <strong class="counter" data-target="42.8">42.8K</strong>
+    <span>Citizen network</span>
+  </div>
+</div>
+  <div class="two"><div class="panel"><div class="label">NETWORK HEALTH</div><h3>Collection efficiency</h3><div class="bigbar"><i style="width:82%"></i></div><b>82%</b><p>AI route optimization is active.</p></div>
+  <div class="panel"><div class="label">NEXT ACTION</div><h3>BIN-042 requires pickup</h3><p>96% full · predicted overflow in 4.2 hours.</p><button class="smallbtn" onclick="showPage(&#39;route&#39;)">VIEW ROUTE</button></div></div>
+</section>
+
+<section id="scan" class="page">
+<div class="intro"><small>01 / AI VISION ENGINE</small><h2>What did you throw away?</h2><p>Enter an item to simulate the AI classification.</p></div>
+<div class="scannerLayout"><div class="panel scanBox"><div class="uploadBox">
+  <label for="wasteImage">📷 Upload Waste Image</label>
+  <input type="file" id="wasteImage" accept="image/*">
+</div><img id="imagePreview" class="imagePreview" alt="Waste preview"><div class="search"><input id="item" placeholder="plastic bottle / banana peel / battery"><button onclick="scan()">ANALYZE</button></div><div id="scanResult" class="scanResult">Awaiting object...</div>
+<div class="quick"><button onclick="quick(&#39;plastic bottle&#39;)">Plastic bottle</button><button onclick="quick(&#39;banana peel&#39;)">Banana peel</button><button onclick="quick(&#39;battery&#39;)">Battery</button><button onclick="quick(&#39;newspaper&#39;)">Newspaper</button></div></div>
+<div class="vision"><div class="cross"></div><div class="line"></div><b>VISION<br>ENGINE</b><small>READY TO SCAN</small></div></div>
+</section>
+
+<section id="bins" class="page"><div class="intro"><small>02 / SENSOR NETWORK</small><h2>Smart Bin Network</h2><p>Live fill level and predicted overflow.</p></div>
+<div class="binGrid" id="binGrid">
+  <div class="bin">
+    <small>BIN-042 · LIVE</small>
+    <div class="pct">96%</div>
+    <div class="meter"><i style="width:96%"></i></div>
+    <p>Predicted overflow: <b>4.2 hours</b></p>
+    <em>HIGH PRIORITY</em>
+    <p style="color:#ffb76d;font-weight:bold">⚠ OVERFLOW RISK</p>
+  </div>
+
+  <div class="bin">
+    <small>BIN-107 · LIVE</small>
+    <div class="pct">63%</div>
+    <div class="meter"><i style="width:63%"></i></div>
+    <p>Predicted overflow: <b>11.8 hours</b></p>
+    <em>MEDIUM PRIORITY</em>
+    
+  </div>
+
+  <div class="bin">
+    <small>BIN-219 · LIVE</small>
+    <div class="pct">31%</div>
+    <div class="meter"><i style="width:31%"></i></div>
+    <p>Predicted overflow: <b>28+ hours</b></p>
+    <em>LOW PRIORITY</em>
+    
+  </div>
+
+  <div class="bin">
+    <small>BIN-118 · LIVE</small>
+    <div class="pct">89%</div>
+    <div class="meter"><i style="width:89%"></i></div>
+    <p>Predicted overflow: <b>6.1 hours</b></p>
+    <em>HIGH PRIORITY</em>
+    
+  </div>
+
+  <div class="bin">
+    <small>BIN-203 · LIVE</small>
+    <div class="pct">47%</div>
+    <div class="meter"><i style="width:47%"></i></div>
+    <p>Predicted overflow: <b>17.5 hours</b></p>
+    <em>LOW PRIORITY</em>
+    
+  </div>
+
+  <div class="bin">
+    <small>BIN-088 · LIVE</small>
+    <div class="pct">76%</div>
+    <div class="meter"><i style="width:76%"></i></div>
+    <p>Predicted overflow: <b>9.3 hours</b></p>
+    <em>MEDIUM PRIORITY</em>
+    
+  </div>
+
+  <div class="bin">
+    <small>BIN-305 · LIVE</small>
+    <div class="pct">92%</div>
+    <div class="meter"><i style="width:92%"></i></div>
+    <p>Predicted overflow: <b>5.0 hours</b></p>
+    <em>HIGH PRIORITY</em>
+    <p style="color:#ffb76d;font-weight:bold">⚠ OVERFLOW RISK</p>
+  </div>
+</div></section>
+
+<section id="route" class="page"><div class="intro"><small>03 / AI ROUTING</small><h2>Dynamic Collection Route</h2><p>The system prioritizes bins before they overflow.</p></div>
+<div class="routeGrid"><div class="map"><div class="road a"></div><div class="road b"></div><div class="road c"></div><span class="pin p1">A</span><span class="pin p2">B</span><span class="pin p3">C</span><span class="truck">🚛</span></div>
+<div class="panel routeList"><h3>AI PRIORITY QUEUE</h3><div class="routeRow"><b>01</b><span>BIN-042<br><small>96% full</small></span><em>HIGH</em></div><div class="routeRow"><b>02</b><span>BIN-118<br><small>89% full</small></span><em>MEDIUM</em></div><div class="routeRow"><b>03</b><span>SORTING HUB<br><small>ETA 18 min</small></span><em>ROUTE</em></div><button class="cta" onclick="recalculate()">RECALCULATE ROUTE</button><div id="routeMsg">
+    <p style="color:#58ff9c">
+      ✓ Route recalculated successfully.
+      <br>
+      BIN-042 moved to priority #1.
+      <br>
+      🚛 Collection vehicle dispatched.
+    </p>
+  </div></div></div></section>
+
+<section id="rewards" class="page activePage"><div class="intro"><small>04 / BEHAVIOR ENGINE</small><h2>EcoPoints</h2><p>Reward correct segregation and build better habits.</p></div>
+<div class="rewardHero"><div><small>CURRENT BALANCE</small><strong id="ecoPoints">1,840</strong><span>EcoPoints</span><button class="smallbtn" onclick="addPoints()">+ ADD ECOPOINTS</button><div class="progress"><i style="width:72%"></i></div><p>360 points to the next reward.</p></div><div class="badge">★<small>GREEN<br>HERO</small></div></div>
+<div class="two"><div class="panel"><h3>Today's activity</h3><p>🍃 Organic sorted <b>+50</b></p><p>📦 Plastic recycled <b>+80</b></p><p>📰 Paper sorted <b>+40</b></p></div><div class="panel"><h3>Community impact</h3><p>You've helped divert an estimated <b>12.4 kg</b> of material from mixed waste.</p></div></div></section>
+</main></div>
+<script src="./WASTE__OS Prototype_files/script.js.download"></script>
+</body></html>
