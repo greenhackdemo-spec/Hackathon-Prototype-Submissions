@@ -1,0 +1,6 @@
+{
+  "name": "EcoLens",
+  "description": "AI-powered eco-friendly product comparator analyzing packaging, recyclability, carbon data, and sustainability claim evidence.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
