@@ -1,0 +1,154 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 600" width="100%" height="100%">
+  <defs>
+    <!-- Background Gradient -->
+    <linearGradient id="bgGrad" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#f8fafc" />
+      <stop offset="100%" stop-color="#f1f5f9" />
+    </linearGradient>
+
+    <!-- Bottle Body Gradient -->
+    <linearGradient id="bottleGrad" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0%" stop-color="#e2e8f0" />
+      <stop offset="20%" stop-color="#ffffff" />
+      <stop offset="70%" stop-color="#f8fafc" />
+      <stop offset="100%" stop-color="#cbd5e1" />
+    </linearGradient>
+
+    <!-- Blue Cap Gradient -->
+    <linearGradient id="capGrad" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0%" stop-color="#1d4ed8" />
+      <stop offset="40%" stop-color="#2563eb" />
+      <stop offset="80%" stop-color="#1e40af" />
+      <stop offset="100%" stop-color="#172554" />
+    </linearGradient>
+
+    <!-- Label Gradient -->
+    <linearGradient id="labelGrad" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#ffffff" />
+      <stop offset="100%" stop-color="#fcfcfd" />
+    </linearGradient>
+
+    <!-- Yellow Swoosh -->
+    <linearGradient id="swooshGrad" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0%" stop-color="#f59e0b" />
+      <stop offset="50%" stop-color="#fbbf24" />
+      <stop offset="100%" stop-color="#fcd34d" />
+    </linearGradient>
+
+    <!-- Bottle Shadow -->
+    <filter id="dropShadow" x="-10%" y="-10%" width="120%" height="125%">
+      <feDropShadow dx="0" dy="16" stdDeviation="14" flood-color="#0f172a" flood-opacity="0.08" />
+    </filter>
+  </defs>
+
+  <!-- Canvas Background -->
+  <rect width="400" height="600" fill="url(#bgGrad)" />
+
+  <!-- Shadow Base -->
+  <ellipse cx="200" cy="542" rx="90" ry="14" fill="#94a3b8" opacity="0.25" />
+
+  <!-- Bottle Assembly -->
+  <g filter="url(#dropShadow)">
+    <!-- Main Bottle Body -->
+    <path d="
+      M 160 120
+      C 160 110, 240 110, 240 120
+      L 245 155
+      C 255 175, 275 210, 280 270
+      C 285 340, 280 430, 272 505
+      C 270 525, 260 535, 240 535
+      L 160 535
+      C 140 535, 130 525, 128 505
+      C 120 430, 115 340, 120 270
+      C 125 210, 145 175, 155 155
+      Z"
+      fill="url(#bottleGrad)"
+      stroke="#cbd5e1"
+      stroke-width="1.5"
+    />
+
+    <!-- Subtle side highlight curves -->
+    <path d="M 134 230 C 130 320, 132 440, 138 500" stroke="#ffffff" stroke-width="4" stroke-linecap="round" opacity="0.7" fill="none" />
+    <path d="M 266 230 C 270 320, 268 440, 262 500" stroke="#cbd5e1" stroke-width="2" stroke-linecap="round" opacity="0.4" fill="none" />
+
+    <!-- Cap Neck Ring -->
+    <rect x="156" y="112" width="88" height="12" rx="4" fill="#1e3a8a" />
+
+    <!-- Blue Flip-Top Cap -->
+    <path d="
+      M 158 114
+      L 162 70
+      C 164 62, 236 62, 238 70
+      L 242 114
+      Z"
+      fill="url(#capGrad)"
+      stroke="#1e3a8a"
+      stroke-width="1"
+    />
+    <!-- Cap Flip Lip -->
+    <path d="M 182 72 L 218 72 C 220 72, 222 75, 220 78 L 215 82 L 185 82 L 180 78 C 178 75, 180 72, 182 72 Z" fill="#3b82f6" />
+    <line x1="162" y1="92" x2="238" y2="92" stroke="#1d4ed8" stroke-width="1.5" />
+
+    <!-- Front Label Artwork Panel -->
+    <rect x="138" y="200" width="124" height="275" rx="14" fill="url(#labelGrad)" stroke="#e2e8f0" stroke-width="1" />
+
+    <!-- Swoosh Graphic -->
+    <path d="M 144 265 Q 190 280 256 245 Q 220 295 144 290 Z" fill="url(#swooshGrad)" />
+
+    <!-- Brand Typography: Clinic Plus -->
+    <text x="188" y="242" font-family="system-ui, -apple-system, sans-serif" font-weight="900" font-size="21" fill="#1e3a8a" text-anchor="middle" letter-spacing="-0.5">
+      Clinic
+    </text>
+    <!-- Red Plus Icon -->
+    <g transform="translate(225, 228)">
+      <rect x="0" y="4" width="14" height="6" rx="1.5" fill="#dc2626" />
+      <rect x="4" y="0" width="6" height="14" rx="1.5" fill="#dc2626" />
+    </g>
+    <text x="200" y="260" font-family="system-ui, -apple-system, sans-serif" font-weight="800" font-size="14" fill="#dc2626" text-anchor="middle" letter-spacing="1">
+      PLUS
+    </text>
+
+    <!-- Subtitle: Strong & Long -->
+    <rect x="148" y="300" width="104" height="24" rx="5" fill="#1e40af" />
+    <text x="200" y="316" font-family="system-ui, -apple-system, sans-serif" font-weight="800" font-size="10" fill="#ffffff" text-anchor="middle" letter-spacing="0.5">
+      STRONG &amp; LONG
+    </text>
+
+    <!-- Category text -->
+    <text x="200" y="338" font-family="system-ui, -apple-system, sans-serif" font-weight="700" font-size="10" fill="#0f172a" text-anchor="middle">
+      Health Shampoo
+    </text>
+
+    <!-- Active Ingredient Pill -->
+    <g transform="translate(150, 355)">
+      <rect x="0" y="0" width="100" height="42" rx="8" fill="#eff6ff" stroke="#bfdbfe" stroke-width="1" />
+      <circle cx="18" cy="21" r="10" fill="#dbeafe" />
+      <path d="M 18 14 C 18 14, 13 21, 13 24 C 13 26.8, 15.2 29, 18 29 C 20.8 29, 23 26.8, 23 24 C 23 21, 18 14, 18 14 Z" fill="#2563eb" />
+      <text x="34" y="18" font-family="system-ui, -apple-system, sans-serif" font-weight="700" font-size="8" fill="#1e3a8a">
+        MILK PROTEIN
+      </text>
+      <text x="34" y="30" font-family="system-ui, -apple-system, sans-serif" font-weight="600" font-size="7.5" fill="#3b82f6">
+        + MULTIVITAMINS
+      </text>
+    </g>
+
+    <!-- Mother & Daughter Silhouette Icon (Subtle) -->
+    <circle cx="200" cy="425" r="16" fill="#fef3c7" stroke="#fde68a" stroke-width="1" />
+    <path d="M 194 425 Q 200 415 206 425 Q 200 432 194 425" fill="#f59e0b" />
+    <circle cx="197" cy="420" r="3" fill="#d97706" />
+    <circle cx="203" cy="422" r="2.5" fill="#d97706" />
+
+    <!-- Volume -->
+    <text x="200" y="462" font-family="system-ui, -apple-system, sans-serif" font-weight="700" font-size="9" fill="#64748b" text-anchor="middle">
+      Net Vol: 340 ml
+    </text>
+  </g>
+
+  <!-- Quality Badge Overlay -->
+  <g transform="translate(45, 535)">
+    <rect x="0" y="0" width="130" height="24" rx="6" fill="#0f172a" opacity="0.9" />
+    <text x="65" y="16" font-family="system-ui, -apple-system, sans-serif" font-weight="700" font-size="10" fill="#ffffff" text-anchor="middle">
+      FRONT PACKAGING
+    </text>
+  </g>
+</svg>

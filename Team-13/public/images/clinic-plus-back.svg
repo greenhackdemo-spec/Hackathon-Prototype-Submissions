@@ -1,0 +1,201 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 600" width="100%" height="100%">
+  <defs>
+    <!-- Background Gradient -->
+    <linearGradient id="bgGradBack" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#f8fafc" />
+      <stop offset="100%" stop-color="#f1f5f9" />
+    </linearGradient>
+
+    <!-- Bottle Body Gradient (Back) -->
+    <linearGradient id="bottleGradBack" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0%" stop-color="#cbd5e1" />
+      <stop offset="30%" stop-color="#f8fafc" />
+      <stop offset="80%" stop-color="#ffffff" />
+      <stop offset="100%" stop-color="#e2e8f0" />
+    </linearGradient>
+
+    <!-- Blue Cap Gradient -->
+    <linearGradient id="capGradBack" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0%" stop-color="#172554" />
+      <stop offset="30%" stop-color="#1e40af" />
+      <stop offset="70%" stop-color="#2563eb" />
+      <stop offset="100%" stop-color="#1d4ed8" />
+    </linearGradient>
+
+    <!-- Back Label Gradient -->
+    <linearGradient id="labelGradBack" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#ffffff" />
+      <stop offset="100%" stop-color="#f8fafc" />
+    </linearGradient>
+
+    <!-- Bottle Shadow -->
+    <filter id="dropShadowBack" x="-10%" y="-10%" width="120%" height="125%">
+      <feDropShadow dx="0" dy="16" stdDeviation="14" flood-color="#0f172a" flood-opacity="0.08" />
+    </filter>
+  </defs>
+
+  <!-- Canvas Background -->
+  <rect width="400" height="600" fill="url(#bgGradBack)" />
+
+  <!-- Shadow Base -->
+  <ellipse cx="200" cy="542" rx="90" ry="14" fill="#94a3b8" opacity="0.25" />
+
+  <!-- Bottle Assembly (Back) -->
+  <g filter="url(#dropShadowBack)">
+    <!-- Main Bottle Body -->
+    <path d="
+      M 160 120
+      C 160 110, 240 110, 240 120
+      L 245 155
+      C 255 175, 275 210, 280 270
+      C 285 340, 280 430, 272 505
+      C 270 525, 260 535, 240 535
+      L 160 535
+      C 140 535, 130 525, 128 505
+      C 120 430, 115 340, 120 270
+      C 125 210, 145 175, 155 155
+      Z"
+      fill="url(#bottleGradBack)"
+      stroke="#cbd5e1"
+      stroke-width="1.5"
+    />
+
+    <!-- Cap Neck Ring -->
+    <rect x="156" y="112" width="88" height="12" rx="4" fill="#1e3a8a" />
+
+    <!-- Blue Flip-Top Cap (Back View with Hinge) -->
+    <path d="
+      M 158 114
+      L 162 70
+      C 164 62, 236 62, 238 70
+      L 242 114
+      Z"
+      fill="url(#capGradBack)"
+      stroke="#1e3a8a"
+      stroke-width="1"
+    />
+    <!-- Cap Hinge Detail -->
+    <rect x="188" y="74" width="24" height="16" rx="3" fill="#172554" />
+    <line x1="162" y1="92" x2="238" y2="92" stroke="#1e3a8a" stroke-width="1.5" />
+
+    <!-- Back Label Panel -->
+    <rect x="136" y="180" width="128" height="315" rx="12" fill="url(#labelGradBack)" stroke="#cbd5e1" stroke-width="1" />
+
+    <!-- Title Bar -->
+    <text x="200" y="202" font-family="system-ui, -apple-system, sans-serif" font-weight="800" font-size="9" fill="#1e3a8a" text-anchor="middle" letter-spacing="0.5">
+      CLINIC PLUS HEALTH SHAMPOO
+    </text>
+    <line x1="144" y1="208" x2="256" y2="208" stroke="#93c5fd" stroke-width="1" />
+
+    <!-- Directions -->
+    <text x="144" y="222" font-family="system-ui, -apple-system, sans-serif" font-weight="700" font-size="7.5" fill="#334155">
+      DIRECTIONS FOR USE:
+    </text>
+    <text x="144" y="233" font-family="system-ui, -apple-system, sans-serif" font-weight="400" font-size="6.5" fill="#64748b">
+      Apply wet hair, lather gently &amp; rinse.
+    </text>
+
+    <!-- Ingredients Heading -->
+    <text x="144" y="250" font-family="system-ui, -apple-system, sans-serif" font-weight="700" font-size="7.5" fill="#334155">
+      KEY INGREDIENTS:
+    </text>
+    <text x="144" y="261" font-family="system-ui, -apple-system, sans-serif" font-weight="400" font-size="6" fill="#64748b">
+      Water, Sodium Laureth Sulfate,
+    </text>
+    <text x="144" y="270" font-family="system-ui, -apple-system, sans-serif" font-weight="400" font-size="6" fill="#64748b">
+      Dimethiconol, TEA-Dodecylbenzene
+    </text>
+    <text x="144" y="279" font-family="system-ui, -apple-system, sans-serif" font-weight="400" font-size="6" fill="#64748b">
+      Sulfonate, Hydrolyzed Milk Protein,
+    </text>
+    <text x="144" y="288" font-family="system-ui, -apple-system, sans-serif" font-weight="400" font-size="6" fill="#64748b">
+      Niacinamide, Lysine HCl, DMDM Hydantoin.
+    </text>
+
+    <!-- Recycling & Material Evidence Box (Key for EcoLens audit!) -->
+    <g transform="translate(142, 305)">
+      <rect x="0" y="0" width="116" height="66" rx="6" fill="#f0fdf4" stroke="#86efac" stroke-width="1" />
+
+      <!-- Resin Identification Code: #2 HDPE -->
+      <g transform="translate(10, 8)">
+        <!-- Recycling Triangle Arrows -->
+        <polygon points="14,0 28,24 0,24" fill="none" stroke="#16a34a" stroke-width="2" stroke-linejoin="round" />
+        <text x="14" y="17" font-family="system-ui, -apple-system, sans-serif" font-weight="900" font-size="11" fill="#16a34a" text-anchor="middle">
+          2
+        </text>
+        <text x="14" y="32" font-family="system-ui, -apple-system, sans-serif" font-weight="800" font-size="7" fill="#15803d" text-anchor="middle">
+          HDPE
+        </text>
+      </g>
+
+      <!-- Label Details -->
+      <text x="44" y="16" font-family="system-ui, -apple-system, sans-serif" font-weight="800" font-size="7" fill="#166534">
+        RECYCLING INFO:
+      </text>
+      <text x="44" y="26" font-family="system-ui, -apple-system, sans-serif" font-weight="600" font-size="6.5" fill="#15803d">
+        Bottle: 100% Recyclable
+      </text>
+      <text x="44" y="36" font-family="system-ui, -apple-system, sans-serif" font-weight="500" font-size="6" fill="#4b5563">
+        Cap: Detach before bin
+      </text>
+      <text x="44" y="46" font-family="system-ui, -apple-system, sans-serif" font-weight="500" font-size="5.5" fill="#6b7280">
+        Resin: Virgin HDPE Polymer
+      </text>
+      <text x="44" y="56" font-family="system-ui, -apple-system, sans-serif" font-weight="500" font-size="5.5" fill="#dc2626">
+        No PCR Content Claimed
+      </text>
+    </g>
+
+    <!-- Manufacturer & Customer Care -->
+    <text x="144" y="390" font-family="system-ui, -apple-system, sans-serif" font-weight="700" font-size="6.5" fill="#334155">
+      MFD BY: HINDUSTAN UNILEVER LTD.
+    </text>
+    <text x="144" y="400" font-family="system-ui, -apple-system, sans-serif" font-weight="400" font-size="6" fill="#64748b">
+      B.D. Sawant Marg, Chakala, Andheri (E),
+    </text>
+    <text x="144" y="409" font-family="system-ui, -apple-system, sans-serif" font-weight="400" font-size="6" fill="#64748b">
+      Mumbai 400 099, Maharashtra.
+    </text>
+
+    <!-- Barcode Representation -->
+    <g transform="translate(148, 425)">
+      <rect x="0" y="0" width="104" height="28" fill="#ffffff" stroke="#e2e8f0" stroke-width="0.8" rx="3" />
+      <!-- Barcode lines -->
+      <line x1="12" y1="4" x2="12" y2="20" stroke="#0f172a" stroke-width="1.8" />
+      <line x1="16" y1="4" x2="16" y2="20" stroke="#0f172a" stroke-width="0.8" />
+      <line x1="20" y1="4" x2="20" y2="20" stroke="#0f172a" stroke-width="2.5" />
+      <line x1="26" y1="4" x2="26" y2="20" stroke="#0f172a" stroke-width="1.2" />
+      <line x1="30" y1="4" x2="30" y2="20" stroke="#0f172a" stroke-width="2.2" />
+      <line x1="35" y1="4" x2="35" y2="20" stroke="#0f172a" stroke-width="0.8" />
+      <line x1="40" y1="4" x2="40" y2="20" stroke="#0f172a" stroke-width="1.5" />
+      <line x1="45" y1="4" x2="45" y2="20" stroke="#0f172a" stroke-width="2.8" />
+      <line x1="52" y1="4" x2="52" y2="20" stroke="#0f172a" stroke-width="0.8" />
+      <line x1="56" y1="4" x2="56" y2="20" stroke="#0f172a" stroke-width="2" />
+      <line x1="62" y1="4" x2="62" y2="20" stroke="#0f172a" stroke-width="1.5" />
+      <line x1="68" y1="4" x2="68" y2="20" stroke="#0f172a" stroke-width="2.2" />
+      <line x1="74" y1="4" x2="74" y2="20" stroke="#0f172a" stroke-width="0.8" />
+      <line x1="78" y1="4" x2="78" y2="20" stroke="#0f172a" stroke-width="1.8" />
+      <line x1="84" y1="4" x2="84" y2="20" stroke="#0f172a" stroke-width="2.2" />
+      <line x1="90" y1="4" x2="90" y2="20" stroke="#0f172a" stroke-width="1.2" />
+      <text x="52" y="26" font-family="monospace" font-size="5.5" fill="#475569" text-anchor="middle">
+        8 901030 456789
+      </text>
+    </g>
+
+    <!-- Volume & MRP -->
+    <text x="144" y="472" font-family="system-ui, -apple-system, sans-serif" font-weight="700" font-size="8" fill="#1e293b">
+      Net Vol: 340 ml
+    </text>
+    <text x="256" y="472" font-family="system-ui, -apple-system, sans-serif" font-weight="700" font-size="8" fill="#1e293b" text-anchor="end">
+      MRP ₹ 185.00
+    </text>
+  </g>
+
+  <!-- Quality Badge Overlay -->
+  <g transform="translate(45, 535)">
+    <rect x="0" y="0" width="130" height="24" rx="6" fill="#0f172a" opacity="0.9" />
+    <text x="65" y="16" font-family="system-ui, -apple-system, sans-serif" font-weight="700" font-size="10" fill="#ffffff" text-anchor="middle">
+      BACK LABEL / EVIDENCE
+    </text>
+  </g>
+</svg>
